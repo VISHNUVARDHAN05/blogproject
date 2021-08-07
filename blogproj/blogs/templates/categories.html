@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for i in cat_obj %}
+<div class="card" style="width: 12rem;">
+  <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap">
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">{{i.name}}</a>
+  </div>
+</div>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% if get_blog %}
+    <div class="container" id="details" style="align:center;">
+    <b><h5>{{get_blog.title}}</h5></b>
+    <img style="display:block;margin-left:auto;margin-right:auto;" class="img-fluid" src="{{get_blog.image.url}}" alt="{{get_blog.title}}"><br>
+    <a class="category-color-1" href="#">{{get_blog.category}}</a><br>
+    <hr>
+    <h5>Descrption</h5>
+    <p style="text-align:justify">{{get_blog.description}}</p>
+    <hr>
+    <p>Created:<b>{{get_blog.date}}</b></p>
+    </div>
+{% else %}
+    <h2>page Not Found</h2>
+{% endif %}
+{% endblock %}
